@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package validation;
+service ValidationService {
+ rpc createValidation (ValidationCreateInput) returns (Validation) {}
+rpc validations (findManyParams) returns (stream Validation) {}
+rpc validation (ValidationWhereUniqueInput) returns (Validation) {}
+rpc updateValidation (ValidationUpdateInput) returns (Validation) {}
+rpc deleteValidation (ValidationWhereUniqueInput) returns (Validation) {} 
+ }
+message ValidationCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Validation {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message ValidationWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message ValidationUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package document;
+service DocumentService {
+ rpc createDocument (DocumentCreateInput) returns (Document) {}
+rpc documents (findManyParams) returns (stream Document) {}
+rpc document (DocumentWhereUniqueInput) returns (Document) {}
+rpc updateDocument (DocumentUpdateInput) returns (Document) {}
+rpc deleteDocument (DocumentWhereUniqueInput) returns (Document) {} 
+ }
+message DocumentCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Document {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DocumentWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DocumentUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

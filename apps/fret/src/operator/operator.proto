@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package operator;
+service OperatorService {
+ rpc createOperator (OperatorCreateInput) returns (Operator) {}
+rpc operators (findManyParams) returns (stream Operator) {}
+rpc operator (OperatorWhereUniqueInput) returns (Operator) {}
+rpc updateOperator (OperatorUpdateInput) returns (Operator) {}
+rpc deleteOperator (OperatorWhereUniqueInput) returns (Operator) {} 
+ }
+message OperatorCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Operator {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message OperatorWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message OperatorUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

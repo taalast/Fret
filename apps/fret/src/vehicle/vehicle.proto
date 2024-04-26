@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package vehicle;
+service VehicleService {
+ rpc createVehicle (VehicleCreateInput) returns (Vehicle) {}
+rpc vehicles (findManyParams) returns (stream Vehicle) {}
+rpc vehicle (VehicleWhereUniqueInput) returns (Vehicle) {}
+rpc updateVehicle (VehicleUpdateInput) returns (Vehicle) {}
+rpc deleteVehicle (VehicleWhereUniqueInput) returns (Vehicle) {} 
+ }
+message VehicleCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Vehicle {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message VehicleWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message VehicleUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

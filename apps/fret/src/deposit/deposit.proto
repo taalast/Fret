@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package deposit;
+service DepositService {
+ rpc createDeposit (DepositCreateInput) returns (Deposit) {}
+rpc deposits (findManyParams) returns (stream Deposit) {}
+rpc deposit (DepositWhereUniqueInput) returns (Deposit) {}
+rpc updateDeposit (DepositUpdateInput) returns (Deposit) {}
+rpc deleteDeposit (DepositWhereUniqueInput) returns (Deposit) {} 
+ }
+message DepositCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Deposit {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DepositWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DepositUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

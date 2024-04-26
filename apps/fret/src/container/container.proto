@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package container;
+service ContainerService {
+ rpc createContainer (ContainerCreateInput) returns (Container) {}
+rpc containers (findManyParams) returns (stream Container) {}
+rpc container (ContainerWhereUniqueInput) returns (Container) {}
+rpc updateContainer (ContainerUpdateInput) returns (Container) {}
+rpc deleteContainer (ContainerWhereUniqueInput) returns (Container) {} 
+ }
+message ContainerCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Container {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message ContainerWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message ContainerUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

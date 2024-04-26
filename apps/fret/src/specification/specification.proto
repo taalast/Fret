@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package specification;
+service SpecificationService {
+ rpc createSpecification (SpecificationCreateInput) returns (Specification) {}
+rpc specifications (findManyParams) returns (stream Specification) {}
+rpc specification (SpecificationWhereUniqueInput) returns (Specification) {}
+rpc updateSpecification (SpecificationUpdateInput) returns (Specification) {}
+rpc deleteSpecification (SpecificationWhereUniqueInput) returns (Specification) {} 
+ }
+message SpecificationCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message Specification {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message SpecificationWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message SpecificationUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

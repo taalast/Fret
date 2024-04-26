@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package declarationEvaluation;
+service DeclarationEvaluationService {
+ rpc createDeclarationEvaluation (DeclarationEvaluationCreateInput) returns (DeclarationEvaluation) {}
+rpc declarationEvaluations (findManyParams) returns (stream DeclarationEvaluation) {}
+rpc declarationEvaluation (DeclarationEvaluationWhereUniqueInput) returns (DeclarationEvaluation) {}
+rpc updateDeclarationEvaluation (DeclarationEvaluationUpdateInput) returns (DeclarationEvaluation) {}
+rpc deleteDeclarationEvaluation (DeclarationEvaluationWhereUniqueInput) returns (DeclarationEvaluation) {} 
+ }
+message DeclarationEvaluationCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationEvaluation {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationEvaluationWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationEvaluationUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

@@ -1,0 +1,20 @@
+export type DeclarationValue = {
+  buyerId: string | null;
+  contractDate: Date | null;
+  contractId: string | null;
+  createdAt: Date;
+  declarantName: string | null;
+  declarationDate: Date | null;
+  declarationPlace: string | null;
+  id: string;
+  indirectValueBase: string | null;
+  invoiceDate: Date | null;
+  invoiceId: string | null;
+  officialMailDate: Date | null;
+  officialMailId: string | null;
+  sellerId: string | null;
+  shippingConditionCode: string | null;
+  totalValueBase: string | null;
+  transactionalValueBase: string | null;
+  updatedAt: Date;
+};

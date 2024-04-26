@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package rawMaterial;
+service RawMaterialService {
+ rpc createRawMaterial (RawMaterialCreateInput) returns (RawMaterial) {}
+rpc rawMaterials (findManyParams) returns (stream RawMaterial) {}
+rpc rawMaterial (RawMaterialWhereUniqueInput) returns (RawMaterial) {}
+rpc updateRawMaterial (RawMaterialUpdateInput) returns (RawMaterial) {}
+rpc deleteRawMaterial (RawMaterialWhereUniqueInput) returns (RawMaterial) {} 
+ }
+message RawMaterialCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message RawMaterial {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message RawMaterialWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message RawMaterialUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

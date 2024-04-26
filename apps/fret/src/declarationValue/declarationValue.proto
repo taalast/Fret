@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+                 package declarationValue;
+service DeclarationValueService {
+ rpc createDeclarationValue (DeclarationValueCreateInput) returns (DeclarationValue) {}
+rpc declarationValues (findManyParams) returns (stream DeclarationValue) {}
+rpc declarationValue (DeclarationValueWhereUniqueInput) returns (DeclarationValue) {}
+rpc updateDeclarationValue (DeclarationValueUpdateInput) returns (DeclarationValue) {}
+rpc deleteDeclarationValue (DeclarationValueWhereUniqueInput) returns (DeclarationValue) {} 
+ }
+message DeclarationValueCreateInput {
+string buyerId = 1;
+string contractDate = 2;
+string contractId = 3;
+string createdAt = 4;
+string declarantName = 5;
+string declarationDate = 6;
+string declarationPlace = 7;
+string id = 8;
+string indirectValueBase = 9;
+string invoiceDate = 10;
+string invoiceId = 11;
+string officialMailDate = 12;
+string officialMailId = 13;
+string sellerId = 14;
+string shippingConditionCode = 15;
+string totalValueBase = 16;
+string transactionalValueBase = 17;
+string updatedAt = 18;
+};
+message DeclarationValue {
+string buyerId = 1;
+string contractDate = 2;
+string contractId = 3;
+string createdAt = 4;
+string declarantName = 5;
+string declarationDate = 6;
+string declarationPlace = 7;
+string id = 8;
+string indirectValueBase = 9;
+string invoiceDate = 10;
+string invoiceId = 11;
+string officialMailDate = 12;
+string officialMailId = 13;
+string sellerId = 14;
+string shippingConditionCode = 15;
+string totalValueBase = 16;
+string transactionalValueBase = 17;
+string updatedAt = 18;
+};
+message DeclarationValueWhereUniqueInput {
+string buyerId = 1;
+string contractDate = 2;
+string contractId = 3;
+string createdAt = 4;
+string declarantName = 5;
+string declarationDate = 6;
+string declarationPlace = 7;
+string id = 8;
+string indirectValueBase = 9;
+string invoiceDate = 10;
+string invoiceId = 11;
+string officialMailDate = 12;
+string officialMailId = 13;
+string sellerId = 14;
+string shippingConditionCode = 15;
+string totalValueBase = 16;
+string transactionalValueBase = 17;
+string updatedAt = 18;
+};
+message DeclarationValueUpdateInput {
+string buyerId = 1;
+string contractDate = 2;
+string contractId = 3;
+string createdAt = 4;
+string declarantName = 5;
+string declarationDate = 6;
+string declarationPlace = 7;
+string id = 8;
+string indirectValueBase = 9;
+string invoiceDate = 10;
+string invoiceId = 11;
+string officialMailDate = 12;
+string officialMailId = 13;
+string sellerId = 14;
+string shippingConditionCode = 15;
+string totalValueBase = 16;
+string transactionalValueBase = 17;
+string updatedAt = 18;
+};
+message findManyParams {
+
+};

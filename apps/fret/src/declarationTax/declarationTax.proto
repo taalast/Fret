@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package declarationTax;
+service DeclarationTaxService {
+ rpc createDeclarationTax (DeclarationTaxCreateInput) returns (DeclarationTax) {}
+rpc declarationTaxes (findManyParams) returns (stream DeclarationTax) {}
+rpc declarationTax (DeclarationTaxWhereUniqueInput) returns (DeclarationTax) {}
+rpc updateDeclarationTax (DeclarationTaxUpdateInput) returns (DeclarationTax) {}
+rpc deleteDeclarationTax (DeclarationTaxWhereUniqueInput) returns (DeclarationTax) {} 
+ }
+message DeclarationTaxCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationTax {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationTaxWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DeclarationTaxUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

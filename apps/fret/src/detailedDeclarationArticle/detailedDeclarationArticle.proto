@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package detailedDeclarationArticle;
+service DetailedDeclarationArticleService {
+ rpc createDetailedDeclarationArticle (DetailedDeclarationArticleCreateInput) returns (DetailedDeclarationArticle) {}
+rpc detailedDeclarationArticles (findManyParams) returns (stream DetailedDeclarationArticle) {}
+rpc detailedDeclarationArticle (DetailedDeclarationArticleWhereUniqueInput) returns (DetailedDeclarationArticle) {}
+rpc updateDetailedDeclarationArticle (DetailedDeclarationArticleUpdateInput) returns (DetailedDeclarationArticle) {}
+rpc deleteDetailedDeclarationArticle (DetailedDeclarationArticleWhereUniqueInput) returns (DetailedDeclarationArticle) {} 
+ }
+message DetailedDeclarationArticleCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DetailedDeclarationArticle {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DetailedDeclarationArticleWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message DetailedDeclarationArticleUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};

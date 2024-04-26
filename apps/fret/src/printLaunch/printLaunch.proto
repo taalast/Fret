@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+                 package printLaunch;
+service PrintLaunchService {
+ rpc createPrintLaunch (PrintLaunchCreateInput) returns (PrintLaunch) {}
+rpc printLaunches (findManyParams) returns (stream PrintLaunch) {}
+rpc printLaunch (PrintLaunchWhereUniqueInput) returns (PrintLaunch) {}
+rpc updatePrintLaunch (PrintLaunchUpdateInput) returns (PrintLaunch) {}
+rpc deletePrintLaunch (PrintLaunchWhereUniqueInput) returns (PrintLaunch) {} 
+ }
+message PrintLaunchCreateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message PrintLaunch {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message PrintLaunchWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message PrintLaunchUpdateInput {
+string createdAt = 1;
+string id = 2;
+string updatedAt = 3;
+};
+message findManyParams {
+
+};
